@@ -183,3 +183,37 @@ In order to pass the project, students must earn a minimum score of 1 for each c
 ### REMEMBER:
 
 This is a learning environment and you are encouraged to try new things, even if they don't work out as well as you planned! While this rubric outlines what we look for in a _good_ project, it is up to you to go above and beyond to create a _great_ project. **Learn from your failures and you'll be prepared to succeed in the workforce**.
+
+# Sections
+
+## Imports
+
+### Import Data - Train from train.csv and Test from test.csv
+
+Find a sample mean and upload to Kaggle as a template for future Kaggle submission for the in-class competition.
+
+## Data Munging and Exploratory Data Analysis (EDA) 
+
+### Data Munging - Drop Null values from certain numerical columns with minimal footprint so as to not completely compromise dataset. 
+
+The purpose of this is to allow for training on data, fill certain columns with values when Null values are too numerous (Front Lot).
+
+### Exploratory Data Analysis - Survey variables to ascertain which ones are highly correlated with `Sales Price` and which ones are normal variables (Gaussian distribution in histogram)
+
+Use these variables as features for our train-test-split. Feature Engineer and create dummy variables for other relevant varables (houses built after 2000, external quality of house, etc.)
+
+## Train-Test-Split on Train Data
+
+### We use `LinearRegression(), Lasso(), Ridge()`
+
+Scaling, Polynomial Features, and other modeling methods are utilized. 
+
+## Metrics
+
+### MAE and RMSE, among other metrics are utilized to evaluate model performance. 
+
+## Use predict method for Test Data `kaggle_data`
+
+### The data is in numpy array format until passed and converted into dataframe for `ridge.predict` method
+
+We then successfully export the data as a `.csv` file for the Kaggle competition upload.
