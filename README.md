@@ -184,6 +184,12 @@ In order to pass the project, students must earn a minimum score of 1 for each c
 
 This is a learning environment and you are encouraged to try new things, even if they don't work out as well as you planned! While this rubric outlines what we look for in a _good_ project, it is up to you to go above and beyond to create a _great_ project. **Learn from your failures and you'll be prepared to succeed in the workforce**.
 
+# Objective: 
+
+1. Create and iteratively refine a regression model
+1. Upload predictions with lowest Root-Mean-Square-Error (RMSE) to Kaggle competition.
+1. Provide insights through reporting and presentation.
+
 # Sections
 
 ## Imports
