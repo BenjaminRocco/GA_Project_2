@@ -199,14 +199,16 @@ This is a learning environment and you are encouraged to try new things, even if
 ### `code`
 
 Main coding file is titled `MainCodingFile.ipynb` and from there smaller coding files include the sections of this massive file. 
+- `Munging_EDA_FeatureEngineering.ipynb` is the first half of `MainCodingFile.ipynb` and includes all data munging, EDA, and feature engineering.
+- `Modeling_And_ErrorMetrics.ipynb` is the second half of `MainCodingFile.ipynb` and includes all train-test split, modeling, and error metric and final export code. 
 
 ### `datasets`
 
-Include all datasets submitted to the Kaggle competition predicting housing prices from an unknown dataset. 
+Includes all datasets submitted to the Kaggle competition predicting housing prices from an unknown dataset, some variation of `mean_submission_<unique_tag>.csv`
 
 ### `images`
 
-Include images from `MainCodingFile.ipynb` as well as images formatted specifically for the sole purpose of use within the powerpoint presentation. 
+Include images from `MainCodingFile.ipynb` as well as images formatted specifically for the sole purpose of use within the powerpoint presentation. Please note some images were edited further within powerpoint for presentation friendly features.  
 
 # Sections of `MainCodingFile.ipynb`
 
