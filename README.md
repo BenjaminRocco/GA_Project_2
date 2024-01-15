@@ -190,7 +190,25 @@ This is a learning environment and you are encouraged to try new things, even if
 1. Upload predictions with lowest Root-Mean-Square-Error (RMSE) to Kaggle competition.
 1. Provide insights through reporting and presentation.
 
-# Sections
+# Folder Organization
+
+## Main `project_2` directory has `README.md` file and `Project_2_GA_Presentation.pdf` the `.pdf` version of the Microsoft Office Powerpoint presentation. 
+
+## Subdirectories include `code`, `datasets`, and `images`. 
+
+### `code`
+
+Main coding file is titled `MainCodingFile.ipynb` and from there smaller coding files include the sections of this massive file. 
+
+### `datasets`
+
+Include all datasets submitted to the Kaggle competition predicting housing prices from an unknown dataset. 
+
+### `images`
+
+Include images from `MainCodingFile.ipynb` as well as images formatted specifically for the sole purpose of use within the powerpoint presentation. 
+
+# Sections of `MainCodingFile.ipynb`
 
 ## Imports
 
