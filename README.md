@@ -16,9 +16,9 @@
 
 ### `code`
 
-Main coding file is titled `MainCodingFile.ipynb` and from there smaller coding files include the sections of this massive file. 
-- `Munging_EDA_FeatureEngineering.ipynb` is the first half of `MainCodingFile.ipynb` and includes all data munging, EDA, and feature engineering.
-- `Modeling_And_ErrorMetrics.ipynb` is the second half of `MainCodingFile.ipynb` and includes all train-test split, modeling, and error metric and final export code. 
+Coding files consist of two files: 
+- `Munging_EDA_FeatureEngineering.ipynb` includes all data munging, EDA, and feature engineering.
+- `Modeling_And_ErrorMetrics.ipynb` includes all train-test split, modeling, and error metric and final export code. 
 
 ### `datasets`
 
@@ -26,9 +26,9 @@ Includes all datasets submitted to the Kaggle competition predicting housing pri
 
 ### `images`
 
-Include images from `MainCodingFile.ipynb` as well as images formatted specifically for the sole purpose of use within the powerpoint presentation. Please note some images were edited further within powerpoint for presentation friendly features.  
+Include images from `Munging_EDA_FeatureEngineering.ipynb` as well as images formatted specifically for the sole purpose of use within the powerpoint presentation. Please note some images were edited further within powerpoint for presentation friendly features.  
 
-# Sections of `MainCodingFile.ipynb`
+# Sections of `Munging_EDA_FeatureEngineering.ipynb`
 
 ## Imports
 
@@ -45,6 +45,8 @@ The purpose of this is to allow for training on data, fill certain columns with 
 ### Exploratory Data Analysis - Survey variables to ascertain which ones are highly correlated with `Sales Price` and which ones are normal variables (Gaussian distribution in histogram)
 
 Use these variables as features for our train-test-split. Feature Engineer and create dummy variables for other relevant varables (houses built after 2000, external quality of house, etc.)
+
+# Sections of `Modeling_And_ErrorMetrics.ipynb`
 
 ## Train-Test-Split on Train Data
 
