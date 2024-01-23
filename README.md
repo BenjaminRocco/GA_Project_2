@@ -90,7 +90,7 @@ RMSE Lasso | $20642.96030481706$
 
 Kaggle score : $23322.66654$ lowest RMSE yet proceeded with Lasso.
 
-In conclusion, the most superior model ended up being Lasso as it resulted in the best Kaggle submission (least RMSE). Please see the training log (titled `Project 2 Notes Training Log`) for more details regarding the iterative process. 
+In conclusion, the most superior model ended up being Lasso as it resulted in the best Kaggle submission (least RMSE). Each of these models were only slightly overfit. Please see the training log (titled `Project 2 Notes Training Log`) for more details regarding the iterative process. 
 
 ## Use predict method for Test Data `kaggle_data`
 
