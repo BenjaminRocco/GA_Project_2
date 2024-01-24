@@ -64,6 +64,8 @@ Our best models utilized the following variable features and resulted in the fol
 
 #### Ridge: 
 
+(See `Munging_EDA_FeatureEngineering.ipynb` for variable details.)
+
 features = ['Overall Qual', 'Gr Liv Area', 'Garage Area', 'Garage Cars','Total Bsmt SF','1st Flr SF','Year Built','Year Remod/Add','Full Bath','Garage Yr Blt','TotRms AbvGrd','Mas Vnr Area','Fireplaces','BsmtFin SF 1','Wood Deck SF','Open Porch SF','After 2000','Exter Qual','Overall Qual','Gr Liv Area Times Garage Area','Kitchen Qual_Ex','Kitchen Qual_Fa','Kitchen Qual_Gd','Kitchen Qual_TA','Total Bsmt SF Times 1st Flr SF','Heating QC_Ex','Heating QC_Fa','Heating QC_Gd','Heating QC_TA',]
 
 $\alpha = 422.9242874389499$
