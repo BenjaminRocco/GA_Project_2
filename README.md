@@ -1,12 +1,14 @@
-# Project 2 - Ames Housing Data and Kaggle Challenge
+# The Ames Housing Sales Price Prediction Challenge
 
 # Problem Statement: 
 
 1. The purpose of this project is to create and iteratively refine a multi-linear-regression (MLR) model.
 1. Success will be measured by the $\textbf{R}^2$ values of train and test scores and how optimal the value becomes as a result of fitting (the absolute difference between these values being close to $0$). 
-1. Finally, we will upload predictions with the lowest Root-Mean-Square-Error (RMSE) to the Kaggle competition submission portal, where these scores will be compared with our classmate's scores to decide upon who created the best model. 
-1. In class, we will provide insights through reporting and presentation.
-1. In conclusion, the finding of this project will be of particular interest to those considering a first-time home purchase, in order to make the best decision possible and taking all the relevant factors into consideration. 
+1. Finally, we upload predictions with the lowest Root-Mean-Square-Error (RMSE) to the Kaggle competition submission portal, where these scores will be compared with other competitors scores to decide upon who created the best model. 
+1. We provide insights through reporting and presentation.
+1. In conclusion, the finding of this project will be of particular interest to those considering a first-time home purchase, in order to make the best decision possible and taking all the relevant factors into consideration.
+
+Ultimately, we recommend deciding upon a first-time home purchase by overall quality, square footage, numbers of various rooms, and other factors most highly correlated with sales price. Our model is highly accurate with a root-mean-squared-error of $23k$ dollars of actual housing price and we delve into more detail within the actual `.ipynb` notebooks found in this repo. 
 
 # Folder Organization
 
@@ -32,19 +34,17 @@ Include images from `Munging_EDA_FeatureEngineering.ipynb` as well as images for
 
 ## Imports
 
-### Import Data - Train from train.csv and Test from test.csv
+### Import Data - Train from `train.csv` and Test from `test.csv`
 
 Find a sample mean and upload to Kaggle as a template for future Kaggle submission for the in-class competition.
 
 ## Data Munging and Exploratory Data Analysis (EDA) 
 
-### Data Munging - Drop Null values from certain numerical columns with minimal footprint so as to not completely compromise dataset. 
-
-The purpose of this is to allow for training on data, fill certain columns with values when Null values are too numerous (Front Lot).
+### Data Munging - Fill Null values from certain numerical columns with median values from overall column. Typically the mean values may be used for normally distributed variables; however, in our case some of these variables are not normally distributed and are either left-skewed or right-skewed, thus, we fill with median values and have zero null values for the modeling stage.  
 
 ### Exploratory Data Analysis - Survey variables to ascertain which ones are highly correlated with `Sales Price` and which ones are normal variables (Gaussian distribution in histogram)
 
-Use these variables as features for our train-test-split. Feature Engineer and create dummy variables for other relevant varables (houses built after 2000, external quality of house, etc.)
+Use these variables as features for our train-test-split. Feature Engineer and create dummy variables for other relevant varables (houses built after the year `2000`, external quality of house, etc.). We go into more detail within the notebook as to why we chose these values for feature engineering and their significance in determining housing prices. 
 
 # Sections of `Modeling_And_ErrorMetrics.ipynb`
 
@@ -68,29 +68,27 @@ Our best models utilized the following variable features and resulted in the fol
 
 features = ['Overall Qual', 'Gr Liv Area', 'Garage Area', 'Garage Cars','Total Bsmt SF','1st Flr SF','Year Built','Year Remod/Add','Full Bath','Garage Yr Blt','TotRms AbvGrd','Mas Vnr Area','Fireplaces','BsmtFin SF 1','Wood Deck SF','Open Porch SF','After 2000','Exter Qual','Overall Qual','Gr Liv Area Times Garage Area','Kitchen Qual_Ex','Kitchen Qual_Fa','Kitchen Qual_Gd','Kitchen Qual_TA','Total Bsmt SF Times 1st Flr SF','Heating QC_Ex','Heating QC_Fa','Heating QC_Gd','Heating QC_TA',]
 
-$\alpha = 422.9242874389499$
-The train score for ridge model is $0.9263867855343225$
-The test score for ridge model is $0.9243491533316479$
+$\alpha = 422.92$
+The train score for ridge model is $0.926$
+The test score for ridge model is $0.924$
 $0.2\%$ difference
-RMSE Ridge | $21103.620038900877$
+RMSE Ridge | $21103.620$
 
-Kaggle Score: $24618.45763$ Score
+Kaggle Score: $24618.458$ Score
 
 #### Lasso: 
 
 features = ['Overall Qual', 'Gr Liv Area', 'Garage Area', 'Garage Cars','Total Bsmt SF','1st Flr SF','Year Built','Year Remod/Add','Full Bath','Garage Yr Blt','TotRms AbvGrd','Mas Vnr Area','Fireplaces','BsmtFin SF 1','Wood Deck SF','Open Porch SF','After 2000','Exter Qual','Overall Qual','Gr Liv Area Times Garage Area','Kitchen Qual_Ex','Kitchen Qual_Fa','Kitchen Qual_Gd','Kitchen Qual_TA','Total Bsmt SF Times 1st Flr SF','Heating QC_Ex','Heating QC_Fa','Heating QC_Gd','Heating QC_TA','1st Flr SF Times 2nd Flr SF','Neighborhood_NridgHt','Neighborhood_Timber','Bsmt Full Bath','Neighborhood_StoneBr','Neighborhood_Somerst','Neighborhood_NoRidge','Not Kitchen Qual_TA','Not Heating QC_TA','Not Neighborhood_OldTown']
 
-The train score for lasso model is $0.9282990792350672$
-The test score for lasso model is $0.927615791511294$
-$0.07\%$ difference
+The train score for lasso model is $0.928$
+The test score for lasso model is $0.927$
+$0.001\%$ difference
 
-MAE Ridge | $15345.579003147821$
-MAE Lasso | $14448.11988434666$
+MAE Lasso | $14448.1199$
 
-RMSE Ridge | $20622.708586182438$
-RMSE Lasso | $20642.96030481706$
+RMSE Lasso | $20642.9603$
 
-Kaggle score : $23322.66654$ lowest RMSE yet proceeded with Lasso.
+Kaggle score : $23322.667$ lowest RMSE yet proceeded with Lasso.
 
 In conclusion, the most superior model ended up being Lasso as it resulted in the best Kaggle submission (least RMSE). Each of these models were only slightly overfit. Please see the training log (titled `Project 2 Notes Training Log`) for more details regarding the iterative process. 
 
